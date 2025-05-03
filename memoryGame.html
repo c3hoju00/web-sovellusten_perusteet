@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>Memory Game</h1>
+
+  <div class="memory-container">
+    <div id="timer">15</div>
+    <p id="randomNumbers" style="display: none;">Memorize: </p>
+    <input type="text" id="numberInput" placeholder="Enter the sequence" style="display: none;"  autocomplete="off">
+    <button id="submitBtn" onclick="submitInput()" style="display: none;">Submit</button>
+    <p id="feedback"></p>
+    <p id="score"></p>
+    <button id="next-btn" style="display: none;" onclick="startGame()">Next</button>
+  </div>
+
+  <script src="js/memoryGame.js"></script>
+  <button class="back-btn" onclick="window.location.href='index.html'">Back</button>
+</body>
+</html>
