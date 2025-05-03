@@ -12,22 +12,19 @@ function startGame() {
     document.getElementById('timer').textContent = timeLeft;
     randomNumbers = generateSequence();
     
-    // Show the sequence
     const display = document.getElementById("randomNumbers");
     display.textContent = "Memorize: " + randomNumbers.join(" ");
     display.style.display = "block";
 
-    // Hide input/submit for now
     document.getElementById("numberInput").style.display = "none";
     document.getElementById("submitBtn").style.display = "none";
 
-    // Start the 15-second timer
     timer = setInterval(() => {
         timeLeft--;
         document.getElementById('timer').textContent = timeLeft;
         if (timeLeft === 0) {
             clearInterval(timer);
-            // Hide sequence, show input
+            
             display.style.display = "none";
             document.getElementById("numberInput").style.display = "inline";
             document.getElementById("submitBtn").style.display = "inline";
@@ -55,7 +52,6 @@ function submitInput() {
         document.getElementById("score").textContent = "Your score is: " + score;
     }
 
-    // Hide input & submit after submitting
     document.getElementById("numberInput").style.display = "none";
     document.getElementById("submitBtn").style.display = "none";
 }
